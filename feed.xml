@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:ns0="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Paper Pod</title>
+    <description>Auto-narrated arXiv papers</description>
+    <link>https://jennyivy.github.io/paper-pod/audio</link>
+    <language>en-us</language>
+    <ns0:author>paper2pod</ns0:author>
+    <ns0:explicit>false</ns0:explicit>
+    <ns0:category text="Technology" />
+  <item><title>Measuring Progress Toward AGI: A Cognitive Framework</title><description>Despite widespread discussion of AGI, there is no clear framework for measuring progress toward it. This ambiguity fuels subjective claims, makes it difficult to track progress, and risks hindering responsible governance. As a starting point to address this gap, we present a framework for understanding system capabilities in relation to human cognitive abilities. Drawing from decades of research in psychology, neuroscience, and cognitive science, we introduce a Cognitive Taxonomy that deconstructs general intelligence into 10 key cognitive faculties. We then propose a rigorous evaluation proto</description><guid>2605.28405</guid><pubDate>Thu, 28 May 2026 19:38:40 +0000</pubDate><enclosure url="https://jennyivy.github.io/paper-pod/audio/2605.28405.mp3" type="audio/mpeg" length="2028429" /></item></channel>
+</rss>
