@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
-from anthropic import Anthropic
+from openai import OpenAI
 
 import paper2pod as p2p
 
@@ -60,7 +60,7 @@ def save_seen(seen: set[str]) -> None:
     SEEN_PATH.write_text(json.dumps(sorted(seen), indent=0))
 
 
-def process_one(aid: str, client: Anthropic, voice: str) -> None:
+def process_one(aid: str, client: OpenAI, voice: str) -> None:
     """Run a single paper through fetch -> script -> TTS -> feed (reuses paper2pod)."""
     meta = p2p.fetch_metadata(aid)
     print(f"      {meta['title']}")
@@ -107,7 +107,7 @@ def main() -> int:
         return 0
 
     print(f"Processing {len(todo)} new papers from {args.category}: {', '.join(todo)}\n")
-    client = Anthropic()
+    client = OpenAI()
     done = []
     for i, aid in enumerate(todo, 1):
         print(f"=== [{i}/{len(todo)}] {aid} ===")
