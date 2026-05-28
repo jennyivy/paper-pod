@@ -2,3 +2,9 @@
 .DS_Store
 __pycache__/
 *.pyc
+paper2pod.py
+daily.py
+requirements.txt
+README.md
+seen.json
+daily.log
