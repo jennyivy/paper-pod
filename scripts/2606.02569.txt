@@ -1,0 +1,9 @@
+Introducing AdaCodec: a predictive visual code designed to optimize video processing in multimodal large language models. This paper addresses the inefficiency found in traditional video model approaches that redundantly process each video frame independently, even when there's little change between them.
+
+AdaCodec tackles this by employing a predictive visual coding mechanism inspired by methods used in video codecs, and it encodes video frames more efficiently. The primary goal is to reduce unnecessary repetition by transmitting a full frame only when the current frame cannot be sufficiently predicted from prior frames. Otherwise, the model sends compact motion-residual updates, greatly saving resources.
+
+There are some impressive results. AdaCodec shows a significant improvement over previous models. Even at one-seventh of the regular token usage, it beats the baseline model comprehensively. Specifically, on general video understanding benchmarks, it cuts the time-to-first-token from nine-point-two-six seconds to one-point-six-two seconds. This is quite remarkable, as it demonstrates substantial latency reduction while enhancing performance. In the long-video category, AdaCodec retains more of the valuable content within the token budget, achieving better scores across various benchmarks.
+
+One factor that might be seen as a limitation is that the current implementation uses a fixed input resolution. Future enhancements could introduce dynamic resolutions to further optimize performance.
+
+In summary, AdaCodec represents a significant leap forward for anyone working with video data in the context of large language models. It's a must-consider technique for saving computational resources and accelerating processing without sacrificing accuracy.
