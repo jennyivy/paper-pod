@@ -1,0 +1,13 @@
+Introducing HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers. This paper matters because it presents a novel approach to managing humanoid robots in complex tasks, highlighting a more effective command interface that simplifies control while enabling versatile movements.
+
+The key contribution of this work is the development of a compact command interface for humanoid robots that enables them to execute complex loco-manipulation tasks without needing dense, kinematic data. HANDOFF distills the expertise of specialized teachers—motion tracking, locomotion, and fall recovery—into a single, deployable controller using a technique called multi-teacher KL distillation.
+
+The core idea is elegant: rather than relying on heavy kinematic data to achieve precise control, HANDOFF uses a ten-dimensional vector that includes basic commands such as planar velocity and pelvis-frame wrist targets. This approach allows a planner to issue commands that are intuitive and modular, meaning that various parts of the control system can be independently changed or upgraded.
+
+Some of the most compelling highlights include the system's performance on the Unitree G1 robot, where HANDOFF achieves state-of-the-art velocity tracking alongside a robust manipulation workspace. This is complemented by its capability to execute tasks driven by natural language without task-specific data or controller fine-tuning. In practice, HANDOFF delivers an extensive range of tasks effectively, including velocity tracking and maintaining robust manipulation workspaces.
+
+Moreover, HANDOFF's versatility finds expression in its design framework. It incorporates complementary specialties into one unified control model through a distilled mixture-of-experts approach. This infusion of targeted expertise results in a control system that not only performs well but also remains robust to disturbances, such as recoverable falls, without needing to switch controllers during runtime.
+
+A significant limitation, however, is that the interface currently exposes only three-dimensional wrist positions in the pelvis frame, not full six-dimensional gripper poses. Handling these additional degrees of control remains a challenge for future research.
+
+In takeaway, HANDOFF is best suited for researchers and developers seeking a simplified control approach to humanoid robot tasks. This framework is particularly useful in settings where modularity and expressiveness in whole-body control are crucial. Consider applying this insight to projects that require robust motion coordination or intuitive task-space interfaces.
