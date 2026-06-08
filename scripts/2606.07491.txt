@@ -1,0 +1,25 @@
+Twelve Quick Tips for Designing AI-Driven High-Performance Computing Workflows, authored by Jamie J. Alnasir, is a crucial read for anyone incorporating Artificial Intelligence into High-Performance Computing systems. 
+
+The core contribution of this paper lies in bridging the gap between traditional HPC workflows and the dynamic nature of AI-driven processes. It addresses how typical deterministic and sequential pipelines need to evolve into data-driven and iterative systems tailored for AI integration. The guide offers practical advice on designing, executing, and optimizing these workflows to make them more scalable and reproducible.
+
+Now, let's dive into the highlights. First off, treat AI as an integral part of the workflow, not just an add-on. This integration ensures that models evolve alongside the workflow, allowing them to both utilize and influence data and control flows dynamically. Concrete results include improved coherence and scalability by designing for data flow from the ground up, rather than making ad hoc modifications later.
+
+Second, focus on "data gravity" instead of prioritizing compute locality. Given that AI-driven tasks often revolve around data movement rather than computation, designing workflows to bring computation to the data minimizes unnecessary data transfers. This approach can cut IO overhead significantly, enhancing overall performance.
+
+Segregating the distinct phases of AI-driven workflows – training, inference, and simulation – can optimize resource use by mapping tasks to appropriate resources. By doing so, processes requiring extensive GPU resources, such as training, are allocated to suitable nodes, while lighter tasks like inference can be distributed broadly, leveraging available parallelism.
+
+Using heterogeneous resources deliberately is another key point. Align workflows with the type of resources they require instead of over-requesting, making efficient use of diverse CPU, GPU, and high-memory nodes. This targeted resource assignment reduces contention and queue times.
+
+Moreover, instead of optimizing a single job, the paper suggests focusing on workflow-level parallelism to boost overall throughput. Multiple smaller, independent tasks that run concurrently often outperform one maximized job, utilizing HPC scheduler features like job arrays effectively.
+
+One surprising recommendation is the heavy emphasis on containerization to ensure reproducibility in these complex environments. Containers encapsulate software stacks, preserving execution environments across differing infrastructures.
+
+Track experiments as essential components of the output. This means documenting configurations, model parameters, and performance metrics methodically to ensure the interpretability and reproducibility of results.
+
+Explicitly designing feedback loops also stands out as a highlight. These loops should facilitate the automatic and systematic refinement of models and workflows in response to interim results, emphasizing iteration and dynamic restructuring.
+
+Lastly, utilizing a workflow engine to orchestrate these pipelines moves away from unmanageable script-based methods. This structured approach supports scalability, reproducibility, and integration with schedulers, enabling more efficient job execution across distributed systems.
+
+One important caveat here is the complexity these changes introduce to traditional workflows, necessitating a paradigm shift in how computational resources are orchestrated and utilized.
+
+The key takeaway? If you’re a practitioner dealing with AI and HPC systems, applying these design principles will enhance your workflow's efficiency and adaptability, making your computational efforts far more effective and robust.
