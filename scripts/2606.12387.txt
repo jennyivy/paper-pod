@@ -1,0 +1,9 @@
+TAHOE is a novel system for Text-to-SQL that uniquely frames prompt optimization as a dynamic data management problem, essential for bridging the gap between demo prototypes and real-world database applications.
+
+The core contribution of the paper is TAHOE's approach to enhance text-to-SQL performance without retraining large language models. It optimizes queries by learning and using hints derived from past errors, effectively turning feedback into a structured Hint Bank. This bypasses costly supervised fine-tuning or slow test-time scaling, making database interaction seamless and efficient.
+
+TAHOE's strengths are clear in the numbers. It significantly boosts the success rate of generating correct SQL queries from 61.95% to 79.42% on development data, and the percentage of codes that pass on four tries jumps from 72.57% to 87.61%. Impressively, TAHOE ensures all queries conform to the Snowflake dialect rules with a syntax pass rate now at 100%, while reducing the need for compiler feedback from nearly three rounds to just about a tenth of a round on average. It's remarkable that these gains come without updating model weights, and the Hint Bank shows cross-model applicability. Even weaker models see a pass rate increase of nearly 20 percentage points. The semantic gains from hint use can be modest when the learning set doesn't fully represent the target tasks, which is something to bear in mind. 
+
+The biggest limitation right now is that TAHOE's deployment phase, which handles updates from user feedback in real-time, hasn't been evaluated yet. 
+
+If you're working in contexts with varying SQL dialects or dynamic user needs, integrating TAHOE could greatly streamline query generation, saving time and resources with its efficient hint-based optimization approach.
