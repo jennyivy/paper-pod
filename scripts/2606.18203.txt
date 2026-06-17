@@ -1,0 +1,9 @@
+Introducing "RubricsTree: Scalable and Evolving Open-Ended Evaluation of Personal Health Agents." This paper addresses critical gaps in evaluating AI-powered personal health agents, offering a more scalable and clinically aligned framework. 
+
+The core contribution here is a framework called RubricsTree. It solves the bottleneck in evaluating personal health agents by introducing an expert-aligned taxonomy that evolves with real-world data. Its key innovation is a hierarchical structure of clinically verifiable rubrics, which assess AI responses with the rigor of physician annotation but at the scale needed for open-ended health queries. 
+
+Some highlights: RubricsTree significantly outperforms previous methods in expert alignment, increasing agreement scores to substantial levels, with intraclass correlation improving from a baseline of 0.291 to 0.876, and Cohen's kappa jumping from 0.431 to 0.787. These metrics translate to much better harmony with clinical experts. The framework reliably detects contextually degraded responses, with detection rates over ninety percent for scenarios such as inaccurate data or inappropriate instructions. It also delivers up to a sixty-six percent improvement in model performance when used as training feedback for personal health agents, showing its potential to improve AI guidance accuracy significantly.
+
+One caveat to note: the framework's taxonomy needs to be tailored for different populations or care settings, as it currently reflects data from a specific user cohort. Adapting it might require additional input from experts.
+
+The takeaway: RubricsTree is a considerable leap forward for those deploying AI in healthcare, offering a structured, scalable, and expert-aligned evaluation method to ensure personal health agents provide reliable and clinically sound advice. This is essential reading for developers of AI health technologies seeking scalable evaluation solutions.
