@@ -1,0 +1,9 @@
+The title "How Transparent is DiffusionGemma?" addresses a vital question for the future of AI: how do we ensure models' decision-making processes remain understandable?
+
+This paper addresses the challenge of transparency in diffusion models like DiffusionGemma, which operate in continuous latent spaces unlike the more transparent autoregressive models. The key insight here is the decomposition of transparency into two main components: understanding the state of the model during computation, and tracing how it reaches its conclusions from these states.
+
+Among the highlights, one compelling result is how DiffusionGemma's transparency measures up to its autoregressive counterpart, the Gemma 4 model. Initially, it appears that DiffusionGemma's computations are massively opaque, over twenty-eight times more so than Gemma 4. However, by viewing the steps between computations as interpretable, the paper astutely reduces this discrepancy to just a factor of 1.1. The authors conducted several case studies showcasing DiffusionGemma's unique reasoning abilities, such as non-chronological reasoning and token smearing — phenomena not observed in standard models. Perhaps one of the more surprising findings is that DiffusionGemma achieves similar monitorability to Gemma 4 despite these differences in architecture.
+
+A notable limitation is that this increased transparency relies heavily on specific architectural choices and training of DiffusionGemma, which may not apply to future models or variants trained differently.
+
+In summary, this work is vital for anyone interested in the transparency and interpretability of AI models, especially those designing future systems. Understanding and evaluating these dimensions in models like DiffusionGemma is crucial for maintaining transparency as models evolve.

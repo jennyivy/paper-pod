@@ -1,0 +1,9 @@
+Introducing LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents, a crucial advancement for improving automated agents in customer-service domains.
+
+This paper tackles the problem of implicit state management in language agents that need to make tool calls while adhering to strict policies. Existing methods require models to reconstruct state from prompts, leading to errors. LedgerAgent revolutionizes this by introducing a structured ledger to maintain task-specific state separately and enforce policy compliance before making environment-changing tool calls.
+
+LedgerAgent demonstrates notable improvements across four customer-service domains and various model backbones. It enhances consistency and performance, achieving up to fifteen-point gains in pass-one metrics in challenging environments like retail and telecommunications. The approach stands out because it integrates a schema-anchored ledger that maintains observed state directly, removing the need for the model to recover state from increasing transcript histories. This results in more reliable and policy-compliant actions. A policy gate checks each proposed action against observed data to prevent policy violations before execution. This reduces typical errors where agents act on stale or incorrect information.
+
+A key limitation of LedgerAgent is its reliance on structured tool-use domains. It assumes that task state can be represented in a domain schema, which can be a challenge in unstructured environments or where visual or inferred state information is necessary. 
+
+In essence, LedgerAgent is a significant leap for developers working on interactive tool-using agents, particularly in structured environments like customer service. It provides a robust way to ensure accurate state management and policy adherence, making it a valuable tool for enhancing chatbot reliability and interaction quality.
