@@ -1,0 +1,9 @@
+Automating the creation of skill files for computer-using agents holds the potential to revolutionize how we manage these systems, offering a solution to the bottleneck of manually crafting and updating skill libraries.
+
+This paper introduces a three-stage pipeline designed to generate skill libraries from interaction trajectory data. It segments user interface interactions, clusters them into candidate skills, and then trains a system to utilize these skills in policy-making. While five of eight skill clusters achieved over 95% accuracy compared to existing benchmarks, the overall transferability and practical improvement of policies using these clusters remain modest at best. For instance, Group Relative Policy Optimization, or GRPO, only increased skill-step accuracy on a specific benchmark from 18.5% to 20.5%.
+
+A few results stand out. The paper demonstrates that while it is feasible to extract coherent skill structures from trajectory data, such structures do not inherently translate to improved policy performance across different environments. The segmentation method using action changes showed promise with high recall rates but was not precise enough, often splitting actions within a single skill. The clustering approach produced readable results for its source environment; however, the alignment is lost when applied elsewhere. Perhaps most telling is that a simple frequency-based baseline outperformed the proposed system in predicting the next skill, which highlights significant room for improvement. 
+
+The method, as it stands, primarily uncovers readable source-domain skill structures but falls short of enhancing cross-domain policy efficacy.
+
+For those crafting systems for graphical user interfaces, this work offers new insights into leveraging interaction data to automate skill library generation, albeit with current limitations in transferring those skills effectively beyond the tested environment.
